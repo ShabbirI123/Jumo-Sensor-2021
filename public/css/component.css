@@ -1,0 +1,65 @@
+/*Footer Area*/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    border: 1px solid black;
+    z-index: 100;
+    background: #fff;
+    padding-bottom: 10px;
+}
+span {
+    font-size: 20px;
+}
+
+.footer .container-fluid #footer-content .footer-header iframe{
+    margin-top: 25px;
+    width: 300px;
+    height: 250px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer .container-fluid .text-muted img {
+    width: 12px;
+    margin-top: 10px;
+    padding-top: 5px;
+}
+
+.footer .container-fluid #footer-content{
+    background-color: red;
+    width: 1200px;
+    margin: 25px auto 25px auto;
+}
+
+.footer .container-fluid #footer-content .footer-header{
+    width: 400px;
+    height: 250px;
+    float: left;
+    color: black;
+    margin-bottom: 70px;
+}
+
+.footer .container-fluid #footer-content .footer-header header{
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/*Footer Responsive*/
+
+/*Header Area*/
+
+/*Header Responsive*/
+
+/*Side Navigation Bar Area*/
+
+/*Side Navigation Bar Responsive*/
