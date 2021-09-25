@@ -1,0 +1,42 @@
+$mainBackground: #FFFFFF;
+$secondBackground: #203367;
+
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    font-family: Arial;
+}
+#main{
+    width: 100%;
+    height: 100%;
+
+    .main{
+        height: 100vh;
+        background: linear-gradient(205deg, transparent 50%, $secondBackground 0) top right;
+        #welcome{
+            height: 100vh;
+            background: linear-gradient(150deg, transparent 70%, grey 0) top left;
+
+            div{
+                h1{
+                    margin: 0px auto;
+                    padding-top: 50px;
+                    font-size: 40px;
+
+                    span{
+                        color: deepskyblue;
+                    }
+                }
+            }
+        }
+
+        #info{
+            background-image: url("../../public/image/hero.png");
+            background-color: #1b5d36;
+            width: 300px;
+            z-index: 120;
+        }
+    }
+
+}

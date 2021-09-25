@@ -15,7 +15,7 @@
   color: #FFFFFF;
   font-size: 35px;
   line-height: 80px;
-  padding: 0 100px;
+  padding: 0px 0px 0px 100px;
   font-weight: bold;
 }
 #navBar nav ul {
@@ -23,6 +23,7 @@
   margin-right: 20px;
   margin-top: 0px;
   font-size: 30px;
+  margin-bottom: 0px;
 }
 #navBar nav ul li {
   display: inline-block;
@@ -31,7 +32,7 @@
 }
 #navBar nav ul li a {
   color: #FFFFFF;
-  font-size: 17px;
+  font-size: 25px;
   padding: 7px 13px;
   border-radius: 5px;
   text-transform: uppercase;
@@ -57,7 +58,7 @@
 @media (max-width: 950px) {
   nav .logo {
     font-size: 30px;
-    padding-left: 50px;
+    padding-left: 50px !important;
   }
   nav ul li a {
     font-size: 16px;

@@ -26,8 +26,10 @@
   color: deepskyblue;
 }
 #main .main #info {
-  background-image: url(/images/hero.png?1b363d3cc2c0b8887aa0b49dcebab415);
+  background-image: url("../../public/image/hero.png");
   background-color: #1b5d36;
   width: 300px;
   z-index: 120;
 }
+
+/*# sourceMappingURL=index.css.map */
