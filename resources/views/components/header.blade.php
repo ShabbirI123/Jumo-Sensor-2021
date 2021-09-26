@@ -8,9 +8,9 @@
         </label>
         <label class="logo">Jumo Sensor</label>
         <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">SIGN IN</a></li>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/about">ABOUT US</a></li>
+            <li><a href="/login">SIGN IN</a></li>
         </ul>
     </nav>
 </div>

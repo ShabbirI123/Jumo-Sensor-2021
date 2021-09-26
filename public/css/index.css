@@ -10,24 +10,27 @@
   height: 100%;
 }
 #main .main {
-  height: 100vh;
-  background: linear-gradient(205deg, transparent 50%, #203367 0) top right;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 1000px;
+  background: #203367;
+  color: #FFFFFF;
+  border-radius: 10px;
+  margin: 50px auto 100px 100px;
 }
 #main .main #welcome {
-  height: 100vh;
-  background: linear-gradient(150deg, transparent 70%, grey 0) top left;
+  padding: 50px 50px 50px 200px;
 }
 #main .main #welcome div h1 {
-  margin: 0px auto;
-  padding-top: 50px;
-  font-size: 40px;
+  font-size: 60px;
+  color: #00bFFF;
 }
 #main .main #welcome div h1 span {
-  color: deepskyblue;
+  color: #FFFFFF;
+  padding-left: 100px;
 }
 #main .main #info {
-  background-image: url(/images/hero.png?1b363d3cc2c0b8887aa0b49dcebab415);
-  background-color: #1b5d36;
-  width: 300px;
-  z-index: 120;
+  padding: 0px 200px 100px 150px;
+}
+#main .main #info div {
+  font-size: 24px;
 }

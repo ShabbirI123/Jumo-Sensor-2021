@@ -1,5 +1,7 @@
 const mix = require('laravel-mix');
 
+//BrowserSync for auto reloading
+mix.browserSync('locahost:8000');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -10,9 +12,11 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
+//For compiling from resource folder to the public folder
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/component.scss', 'public/css')
     .sass('resources/sass/index.scss', 'public/css')
     .sourceMaps();
+
+
