@@ -1,0 +1,135 @@
+$lightBlue: #0082E6;
+$white: #FFFFFF;
+$darkBlue: #1B9BFF;
+$navy: #2C3E50;
+#navBar{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: montserrat;
+
+    nav{
+        background: $lightBlue;
+        height: 80px;
+        width: 100%;
+
+        .logo{
+            color: $white;
+            font-size: 35px;
+            line-height: 80px;
+            padding: 0px 0px 0px 100px;
+            font-weight: bold;
+        }
+
+        ul{
+            float: right;
+            margin-right: 20px;
+            margin-top: 0px;
+            font-size: 30px;
+            margin-bottom: 0px;
+
+            li{
+                display: inline-block;
+                line-height: 80px;
+                margin: 0 5px;
+
+                a{
+                    color: $white;
+                    font-size: 25px;
+                    padding: 7px 13px;
+                    border-radius: 5px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+
+                a:hover{
+                    background: $darkBlue;
+                    transition: 0.5s;
+                }
+            }
+        }
+
+        .checkBtn{
+            font-size: 30px;
+            color: $white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #checkbox{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 950px){
+    nav{
+        .logo{
+            font-size: 30px;
+            padding-left: 50px !important;
+
+        }
+
+        ul{
+            li{
+                a{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 850px){
+    nav{
+        position: fixed;
+
+        .logo{
+            padding: 0px 0px 0px 10px !important;
+        }
+
+        .checkBtn{
+            display: block !important;
+        }
+
+        ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: $navy;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all 0.5s;
+            margin-top: 0px;
+            padding-left: 0px !important;
+
+            li{
+                display: block;
+                line-height: 30px;
+                width: 100%;
+                a{
+                    font-size: 20px;
+                }
+
+                a:hover{
+                    background: none;
+                    color: $lightBlue;
+                }
+            }
+        }
+    }
+
+    #checkbox:checked ~ ul{
+        left: 0;
+    }
+
+    iframe{
+        width: 100%;
+    }
+}
