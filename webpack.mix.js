@@ -1,7 +1,11 @@
 const mix = require('laravel-mix');
 
 //BrowserSync for auto reloading
-mix.browserSync('locahost:8000');
+mix.browserSync({
+    ui: {
+        port:8000
+    }
+});
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
