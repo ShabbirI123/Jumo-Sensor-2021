@@ -1,0 +1,36 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  font-family: Arial;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+}
+#main .main {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 1000px;
+  background: #203367;
+  color: #FFFFFF;
+  border-radius: 10px;
+  margin: 50px auto 100px 100px;
+}
+#main .main #welcome {
+  padding: 50px 50px 50px 200px;
+}
+#main .main #welcome div h1 {
+  font-size: 60px;
+  color: #00bFFF;
+}
+#main .main #welcome div h1 span {
+  color: #FFFFFF;
+  padding-left: 100px;
+}
+#main .main #info {
+  padding: 0px 200px 100px 150px;
+}
+#main .main #info div {
+  font-size: 24px;
+}
