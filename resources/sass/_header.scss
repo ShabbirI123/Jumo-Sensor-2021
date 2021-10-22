@@ -87,8 +87,8 @@ $navy: #2C3E50;
 
 @media (max-width: 850px){
     nav{
-        position: fixed;
-
+        position: absolute;
+        top: 0;
         .logo{
             padding: 0px 0px 0px 10px !important;
         }
