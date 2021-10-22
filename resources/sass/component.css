@@ -66,7 +66,8 @@
 }
 @media (max-width: 850px) {
   nav {
-    position: fixed;
+    position: absolute;
+    top: 0;
   }
   nav .logo {
     padding: 0px 0px 0px 10px !important;
@@ -106,6 +107,69 @@
   iframe {
     width: 100%;
   }
+}
+/*Color*/
+/*Size*/
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.footer {
+  background: #000000;
+  color: #FFFFFF;
+  padding-bottom: 25px;
+}
+.footer .container-fluid #footer-content {
+  width: 1200px;
+  margin: auto;
+  height: 320px;
+}
+.footer .container-fluid #footer-content .footer-header {
+  display: block;
+  padding-left: 5px;
+  width: 390px;
+  float: left;
+}
+.footer .container-fluid #footer-content .footer-header header {
+  font-size: 28px;
+  padding: 15px 0px 20px 0px;
+  font-weight: bold;
+  text-align: center;
+}
+.footer .container-fluid #footer-content .footer-header div ul li {
+  width: 150px;
+  list-style: none;
+  line-height: 50px;
+  font-size: 24px;
+}
+.footer .container-fluid #footer-content .footer-header div ul li a {
+  color: #FFFFFF;
+}
+.footer .container-fluid #footer-content .footer-header div ul li:hover {
+  border-bottom: #2C3E50 solid 4px;
+}
+.footer .container-fluid #footer-content #contact header {
+  padding: 15px 0px 20px 0px;
+}
+.footer .container-fluid #footer-content #contact div h2 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 50px;
+}
+.footer .container-fluid #footer-content #contact div p {
+  font-size: 20px;
+  line-height: 50px;
+}
+.footer .container-fluid #footer-content #contact div p a {
+  font-size: 20px;
+  line-height: 50px;
+}
+.footer .container-fluid #footer-content #location iframe {
+  padding-left: 70px;
+  width: 250px;
+  height: 250px;
 }
 
 /*# sourceMappingURL=component.css.map */
