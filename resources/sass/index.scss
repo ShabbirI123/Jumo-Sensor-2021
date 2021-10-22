@@ -18,15 +18,28 @@ $secondHeaderColor: #00bFFF;
         color: $headerColor;
         border-radius: 10px;
         margin: 50px auto 100px 100px;
+
+        @media (max-width: 1200px) {
+            width: 100%;
+            margin: 25px 0px 0px 0px;
+            border-radius: 0;
+            height: 100%;
+        }
+
         #welcome{
-            padding: 50px 50px 50px 200px;
+
+            padding: 50px 5% 50px 20%;
             div{
                 h1{
                     font-size: 60px;
                     color: $secondHeaderColor;
+
+                    @media (max-width: 750px){
+
+                    }
                     span{
                         color: $headerColor;
-                        padding-left: 100px;
+                        padding-left: 10%;
                     }
                 }
             }

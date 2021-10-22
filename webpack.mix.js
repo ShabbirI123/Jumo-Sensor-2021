@@ -1,11 +1,6 @@
 const mix = require('laravel-mix');
 
-//BrowserSync for auto reloading
-mix.browserSync({
-    ui: {
-        port:8000
-    }
-});
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -23,4 +18,5 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/index.scss', 'public/css')
     .sourceMaps();
 
-
+//Auto reload for pages
+mix.browserSync("http://127.0.0.1:8000");
