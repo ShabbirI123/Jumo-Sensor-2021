@@ -21,7 +21,7 @@ use App\Http\Controllers\LoginController;
 Route::view('/', 'index');
 Route::view('/login', 'login');
 Route::view('/profile', 'profile');
-Route::view('/home', 'home');
+Route::view('/welcome', 'loggedIn/welcome');
 
 Route::post('/checklogin', [LoginController::class, 'checklogin']);
 

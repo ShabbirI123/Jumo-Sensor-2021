@@ -7,7 +7,6 @@ use DB;
 use App\Http\Requests;
 use Validator;
 use Auth;
-use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -28,7 +27,7 @@ class LoginController extends Controller
             if (Auth::user()->updated_at === null) {
                 return redirect('/profile')->with('info', 'Please change your login credentials');
             } else {
-                return redirect('/home');
+                return redirect('/welcome');
             }
         } else {
             return back()->with('error', 'Wrong Login Details');
