@@ -29,7 +29,7 @@
                 <span class="tooltip">Users</span>
             </li>
             <li>
-                <a href="#">
+                <a href="profile">
                     <i class='bx bx-user'></i>
                     <span class="links_name">My Profile</span>
                 </a>
