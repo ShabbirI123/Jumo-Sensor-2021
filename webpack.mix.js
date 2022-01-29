@@ -16,7 +16,11 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/component.scss', 'public/css')
     .sass('resources/sass/index.scss', 'public/css')
-    .sourceMaps();
+    .sourceMaps()
+    .copy(
+        'node_modules/@fortawesome/fontawesome-free/webfonts',
+        'public/webfonts'
+    );
 
 //Auto reload for pages
 mix.browserSync("http://127.0.0.1:8000");

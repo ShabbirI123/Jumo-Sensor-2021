@@ -1,61 +1,93 @@
-<div>
-    <div class="sidebar">
-        <div class="logo_content">
-            <div class="logo">
-                <div class="logo_name">Jumo Sensor</div>
-            </div>
-            <i class='bx bx-menu' id="btn"></i>
-        </div>
-        <ul class="nav_list">
-            <li>
-                <a href="/home">
-                    <i class='bx bxs-home'></i>
-                    <span class="links_name">Home</span>
-                </a>
-                <span class="tooltip">Home</span>
-            </li>
-            <li>
-                <a href="/dashboard">
-                    <i class='bx bx-grid-alt'></i>
-                    <span class="links_name">Dashboard</span>
-                </a>
-                <span class="tooltip">Dashboard</span>
-            </li>
-            <li>
-                <a href="/users">
-                    <i class='bx bxs-user-account'></i>
-                    <span class="links_name">Users</span>
-                </a>
-                <span class="tooltip">Users</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-user'></i>
-                    <span class="links_name">My Profile</span>
-                </a>
-                <span class="tooltip">My Profile</span>
-            </li>
-            <li>
-                <a href="/download">
-                    <i class='bx bxs-download' id="downloadBtn"></i>
-                    <span class="links_name">Download</span>
-                </a>
-                <span class="tooltip">Download</span>
-            </li>
-            <li>
-                <a href="/settings">
-                    <i class='bx bx-cog'></i>
-                    <span class="links_name">Setting</span>
-                </a>
-                <span class="tooltip">Setting</span>
-            </li>
-            <li>
-                <a href="/logout">
-                    <i class='bx bx-log-out' id="log_out"></i>
-                    <span class="links_name">Sign Out</span>
-                </a>
-                <span class="tooltip">Sign Out</span>
-            </li>
-        </ul>
-    </div>
-</div>
+<link href="{{asset('css/component.css')}}" rel="stylesheet">
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<div class="area"></div><nav class="main-menu">
+    <ul>
+        <li>
+            <a href="http://justinfarrow.com">
+                <i class="fa fa-home fa-2x"></i>
+                <span class="nav-text">
+                            Dashboard
+                        </span>
+            </a>
+
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+                <i class="fa fa-laptop fa-2x"></i>
+                <span class="nav-text">
+                            Stars Components
+                        </span>
+            </a>
+
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+                <i class="fa fa-list fa-2x"></i>
+                <span class="nav-text">
+                            Forms
+                        </span>
+            </a>
+
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+                <i class="fa fa-folder-open fa-2x"></i>
+                <span class="nav-text">
+                            Pages
+                        </span>
+            </a>
+
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-bar-chart-o fa-2x"></i>
+                <span class="nav-text">
+                            Graphs and Statistics
+                        </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-font fa-2x"></i>
+                <span class="nav-text">
+                           Quotes
+                        </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-table fa-2x"></i>
+                <span class="nav-text">
+                            Tables
+                        </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-map-marker fa-2x"></i>
+                <span class="nav-text">
+                            Maps
+                        </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-info fa-2x"></i>
+                <span class="nav-text">
+                            Documentation
+                        </span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="logout">
+        <li>
+            <a href="#">
+                <i class="fa fa-power-off fa-2x"></i>
+                <span class="nav-text">
+                            Logout
+                        </span>
+            </a>
+        </li>
+    </ul>
+</nav>
