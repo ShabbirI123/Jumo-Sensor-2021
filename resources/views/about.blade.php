@@ -17,4 +17,6 @@
 <x-side-navigation-bar></x-side-navigation-bar>
 {{-- TODO: Add content from    <about-component></about-component>--}}
 <x-footer></x-footer>
-</div><?php
+</body>
+</html>
+<?php
