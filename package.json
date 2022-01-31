@@ -16,7 +16,7 @@
         "browser-sync": "^2.26.5",
         "browser-sync-webpack-plugin": "^2.0.1",
         "jquery": "^3.6",
-        "laravel-mix": "^6.0.6",
+        "laravel-mix": "^6.0.41",
         "lodash": "^4.17.19",
         "popper.js": "^1.16.1",
         "postcss": "^8.1.14",
