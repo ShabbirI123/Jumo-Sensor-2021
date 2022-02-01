@@ -18,6 +18,8 @@ How to start this project.
 Just for the first time
 ###0.1. Step
 Copy the .env.example file and paste it to the project 
+
+
 folder and rename it to .env.
 
 ###0.2. Step

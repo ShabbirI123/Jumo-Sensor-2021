@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap);
 #navBar {
   padding: 0px;
   margin: 0px;
@@ -6,31 +7,31 @@
   box-sizing: border-box;
   font-family: montserrat;
 }
-#navBar nav {
+#navBar .navbar-container {
   background: #0082E6;
   height: 80px;
   width: 100%;
 }
-#navBar nav .logo {
+#navBar .navbar-container .logo {
   color: #FFFFFF;
   font-size: 35px;
   line-height: 80px;
   padding: 0px 0px 0px 100px;
   font-weight: bold;
 }
-#navBar nav ul {
+#navBar .navbar-container ul {
   float: right;
   margin-right: 20px;
   margin-top: 0px;
   font-size: 30px;
   margin-bottom: 0px;
 }
-#navBar nav ul li {
+#navBar .navbar-container ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
-#navBar nav ul li a {
+#navBar .navbar-container ul li a {
   color: #FFFFFF;
   font-size: 25px;
   padding: 7px 13px;
@@ -38,11 +39,11 @@
   text-transform: uppercase;
   text-decoration: none;
 }
-#navBar nav ul li a:hover {
+#navBar .navbar-container ul li a:hover {
   background: #1B9BFF;
   transition: 0.5s;
 }
-#navBar nav .checkBtn {
+#navBar .navbar-container .checkBtn {
   font-size: 30px;
   color: #FFFFFF;
   float: right;
@@ -51,7 +52,7 @@
   cursor: pointer;
   display: none;
 }
-#navBar nav #checkbox {
+#navBar .navbar-container #checkbox {
   display: none;
 }
 
@@ -108,132 +109,197 @@
     width: 100%;
   }
 }
-.fa-2x {
-  font-size: 2em;
-}
-
-.fa {
-  position: relative;
-  display: table-cell;
-  width: 60px;
-  height: 36px;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 20px;
-}
-
-.main-menu:hover, nav.main-menu.expanded {
-  width: 250px;
-  overflow: visible;
-}
-
-.main-menu {
-  background: #212121;
-  border-right: 1px solid #e5e5e5;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  width: 60px;
-  overflow: hidden;
-  transition: width 0.05s linear;
-  -webkit-transform: translateZ(0) scale(1, 1);
-  z-index: 1000;
-}
-
-.main-menu > ul {
-  margin: 7px 0;
-}
-
-.main-menu li {
-  position: relative;
-  display: block;
-  width: 250px;
-}
-
-.main-menu li > a {
-  position: relative;
-  display: table;
-  border-collapse: collapse;
-  border-spacing: 0;
-  color: #999;
-  font-family: arial;
-  font-size: 14px;
-  text-decoration: none;
-  -webkit-transform: translateZ(0) scale(1, 1);
-  transition: all 0.1s linear;
-}
-
-.main-menu .nav-icon {
-  position: relative;
-  display: table-cell;
-  width: 60px;
-  height: 36px;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 18px;
-}
-
-.main-menu .nav-text {
-  position: relative;
-  display: table-cell;
-  vertical-align: middle;
-  width: 190px;
-  font-family: "Titillium Web", sans-serif;
-}
-
-.main-menu > ul.logout {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.no-touch .scrollable.hover {
-  overflow-y: hidden;
-}
-
-.no-touch .scrollable.hover:hover {
-  overflow-y: auto;
-  overflow: visible;
-}
-
-a:hover, a:focus {
-  text-decoration: none;
-}
-
-nav {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-
-nav ul, nav li {
-  outline: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.main-menu li:hover > a, nav.main-menu li.active > a, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .no-touch .dashboard-page nav.dashboard-menu ul li:hover a, .dashboard-page nav.dashboard-menu ul li.active a {
+::-moz-selection {
   color: #fff;
-  background-color: #5fa2db;
+  background: #11101d;
+}
+::selection {
+  color: #fff;
+  background: #11101d;
 }
 
-.area {
-  float: left;
-  background: #e2e2e2;
-  width: 100%;
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100%;
+  width: 75px;
+  background: #11101d;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
 }
 
-@font-face {
-  font-family: "Titillium Web";
-  font-style: normal;
-  font-weight: 300;
-  src: local("Titillium WebLight"), local("TitilliumWeb-Light"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format("woff");
+.sidebar.active {
+  width: 230px;
 }
+
+.sidebar .logo_content .logo {
+  color: #fff;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active .logo_content .logo {
+  opacity: 1;
+  pointer-events: none;
+}
+
+.logo_content .logo i {
+  font-size: 28px;
+  margin-right: 5px;
+}
+
+.logo_content .logo .logo_name {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sidebar #btn {
+  position: absolute;
+  color: #fff;
+  top: 6px;
+  left: 50%;
+  font-size: 22px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+}
+
+.sidebar.active #btn {
+  left: 90%;
+}
+
+.sidebar ul {
+  margin-top: 20px;
+  padding-left: 0 !important;
+}
+
+.sidebar ul li {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  list-style: none;
+  line-height: 50px;
+  margin: 5px 0;
+}
+
+.sidebar ul li .tooltip {
+  position: absolute;
+  left: 125px;
+  top: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  height: 35px;
+  width: 120px;
+  background: #fff;
+  line-height: 35px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+}
+
+.sidebar.active ul li .tooltip {
+  display: none;
+}
+
+.sidebar ul li:hover .tooltip {
+  transition: all 0.5s ease;
+  opacity: 1;
+  top: 50%;
+}
+
+.sidebar ul li input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  background: #1d1b31;
+  padding-left: 50px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.sidebar ul li .bx-search {
+  position: absolute;
+  z-index: 99;
+  color: #fff;
+  font-size: 22px;
+  transition: all 0.5s ease;
+}
+
+.sidebar ul li .bx-search:hover {
+  background: #fff;
+  color: #1d1b31;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 12px;
+  white-space: nowrap;
+  transition: all 0.4s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #11101d;
+  background: #fff;
+}
+
+.sidebar ul li i {
+  font-size: 18px;
+  font-weight: 400;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.sidebar .links_name {
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.sidebar.active .links_name {
+  transition: 0s;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.profile #log_out {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  background: #1d1b31;
+}
+
 /*Color*/
 /*Size*/
 .clearfix::after {

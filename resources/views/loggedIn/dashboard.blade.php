@@ -9,14 +9,25 @@
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body class="antialiased">
-
 <x-header></x-header>
 <x-side-navigation-bar></x-side-navigation-bar>
-{{-- TODO: Add content from    <about-component></about-component>--}}
+<div class="mybody">
+    @if(isset(Auth::user()->name))
+        <div id="app">
+{{--
+            <app-component></app-component>
+            TODO: Einbinden der Dashboard
+            TODO: CSS der 'App-Componen' einbinden
+--}}
+        </div>
+    @else
+        <script>window.location = "/login";</script>
+    @endif
+</div>
 <x-footer></x-footer>
 </body>
-</html>
-<?php

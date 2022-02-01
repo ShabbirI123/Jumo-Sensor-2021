@@ -1194,9 +1194,9 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","D:\\\\Programme\\\\Xampp
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
+/******/ 			"css/component": 0,
 /******/ 			"css/app": 0,
-/******/ 			"css/index": 0,
-/******/ 			"css/component": 0
+/******/ 			"css/index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -1246,10 +1246,10 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","D:\\\\Programme\\\\Xampp
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/index","css/component"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/index","css/component"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/index","css/component"], () => (__webpack_require__("./resources/sass/component.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/index","css/component"], () => (__webpack_require__("./resources/sass/index.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/component","css/app","css/index"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/component","css/app","css/index"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/component","css/app","css/index"], () => (__webpack_require__("./resources/sass/component.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/component","css/app","css/index"], () => (__webpack_require__("./resources/sass/index.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
