@@ -1,10 +1,10 @@
+<link href="{{asset("css/component.css")}}" rel="stylesheet">
 <div>
     <div class="sidebar">
         <div class="logo_content">
             <div class="logo">
-                <div class="logo_name">Jumo Sensor</div>
+                <p class="logo_name">Jumo Sensor</p>
             </div>
-            <i class='bx bx-menu' id="btn"></i>
         </div>
         <ul class="nav_list">
             <li>
