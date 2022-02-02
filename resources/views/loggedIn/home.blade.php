@@ -12,7 +12,6 @@
 
 </head>
 <body>
-    <x-header></x-header>
     <x-side-navigation-bar></x-side-navigation-bar>
     <div class="home">
         <h1>Welcome </h1>
@@ -50,5 +49,4 @@
             </div>
         </div>
     </div>
-    <x-footer></x-footer>
 </body>

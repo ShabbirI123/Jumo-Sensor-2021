@@ -14,14 +14,27 @@
 
 </head>
 <body class="antialiased">
-<x-header></x-header>
 <x-side-navigation-bar></x-side-navigation-bar>
     <div class="mybody">
         @if(isset(Auth::user()->name))
             @if(Auth::user()->role=='admin'||Auth::user()->role=='superuser')
                 <div id="app">
-                    <app-component></app-component>
-                    <footer-component></footer-component>
+                    <div class="download">
+                        <h1>Download</h1>
+                        <div id="download_form">
+                            <p>Select data to download</p>
+                            <form id="data_form" action="export" method="GET">
+                                <div class="form_only">
+                                    <input type="checkbox" name="Temperature" id="Temperature">Temperature<br>
+                                    <input type="checkbox" name="Co2" id="Co2">Co2<br>
+                                    <input type="checkbox" name="Humidity" id="Humidity">Humidity<br>
+                                    From: <br><input type="text" name="StartDate" placeholder="Ex.: 2021-07-01 11:08:10" class="Datepicker"><br>
+                                    To: <br><input type="text" name="EndDate" placeholder="Ex.: 2021-07-01 11:08:11" class="Datepicker"><br>
+                                    <input type="submit" value="Download" name="submit" class="btn btn-primary">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             @else
                 <script>
@@ -33,7 +46,6 @@
             <script>window.location = "/login";</script>
         @endif
     </div>
-<x-footer></x-footer>
 
 </body>
 </html>

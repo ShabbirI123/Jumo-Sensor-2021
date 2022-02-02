@@ -7,31 +7,31 @@
   box-sizing: border-box;
   font-family: montserrat;
 }
-#navBar nav {
+#navBar .navbar-container {
   background: #0082E6;
   height: 80px;
   width: 100%;
 }
-#navBar nav .logo {
+#navBar .navbar-container .logo {
   color: #FFFFFF;
   font-size: 35px;
   line-height: 80px;
   padding: 0px 0px 0px 100px;
   font-weight: bold;
 }
-#navBar nav ul {
+#navBar .navbar-container ul {
   float: right;
   margin-right: 20px;
   margin-top: 0px;
   font-size: 30px;
   margin-bottom: 0px;
 }
-#navBar nav ul li {
+#navBar .navbar-container ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
-#navBar nav ul li a {
+#navBar .navbar-container ul li a {
   color: #FFFFFF;
   font-size: 25px;
   padding: 7px 13px;
@@ -39,11 +39,11 @@
   text-transform: uppercase;
   text-decoration: none;
 }
-#navBar nav ul li a:hover {
+#navBar .navbar-container ul li a:hover {
   background: #1B9BFF;
   transition: 0.5s;
 }
-#navBar nav .checkBtn {
+#navBar .navbar-container .checkBtn {
   font-size: 30px;
   color: #FFFFFF;
   float: right;
@@ -52,7 +52,7 @@
   cursor: pointer;
   display: none;
 }
-#navBar nav #checkbox {
+#navBar .navbar-container #checkbox {
   display: none;
 }
 
@@ -109,18 +109,10 @@
     width: 100%;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
 ::-moz-selection {
   color: #fff;
   background: #11101d;
 }
-
 ::selection {
   color: #fff;
   background: #11101d;
@@ -187,6 +179,7 @@
 
 .sidebar ul {
   margin-top: 20px;
+  padding-left: 0 !important;
 }
 
 .sidebar ul li {
