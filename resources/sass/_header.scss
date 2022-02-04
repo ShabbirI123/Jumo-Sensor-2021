@@ -12,13 +12,13 @@ $navy: #2C3E50;
 
     .navbar-container {
         background: $lightBlue;
-        height: 80px;
+        height: 60px;
         width: 100%;
 
         .logo{
             color: $white;
-            font-size: 35px;
-            line-height: 80px;
+            font-size: 30px;
+            line-height: 60px;
             padding: 0px 0px 0px 100px;
             font-weight: bold;
         }
@@ -32,12 +32,12 @@ $navy: #2C3E50;
 
             li{
                 display: inline-block;
-                line-height: 80px;
+                line-height: 60px;
                 margin: 0 5px;
 
                 a{
                     color: $white;
-                    font-size: 25px;
+                    font-size: 14px;
                     padding: 7px 13px;
                     border-radius: 5px;
                     text-transform: uppercase;
@@ -55,7 +55,7 @@ $navy: #2C3E50;
             font-size: 30px;
             color: $white;
             float: right;
-            line-height: 80px;
+            line-height: 60px;
             margin-right: 40px;
             cursor: pointer;
             display: none;
@@ -70,7 +70,7 @@ $navy: #2C3E50;
 @media (max-width: 950px){
     nav{
         .logo{
-            font-size: 30px;
+            font-size: 25px;
             padding-left: 50px !important;
 
         }
@@ -78,7 +78,7 @@ $navy: #2C3E50;
         ul{
             li{
                 a{
-                    font-size: 16px;
+                    font-size: 14px;
                 }
             }
         }
@@ -102,7 +102,7 @@ $navy: #2C3E50;
             width: 100%;
             height: 100vh;
             background: $navy;
-            top: 80px;
+            top: 60px;
             left: -100%;
             text-align: center;
             transition: all 0.5s;
