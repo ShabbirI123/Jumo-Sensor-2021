@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DownloadFileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,7 +44,7 @@ Route::get('/logout', '\App\Http\Controllers\LoginController@logout');
 //Route::post('/profile', [\App\Http\Controllers\UserManagementController::class, 'changePassword'])->name('changePassword');
 
 
-Route::get('jumo_values', [DownloadFile::class,'getData']);
+Route::get('getData', [DownloadFileController::class, 'getData']);
 
 /*
  * Views which can be accessed with login

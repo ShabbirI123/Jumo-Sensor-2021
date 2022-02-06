@@ -1,11 +1,14 @@
 <link href="{{asset("css/component.css")}}" rel="stylesheet">
 <div>
     <div class="sidebar">
-        <div class="logo_content">
-            <div class="logo">
-                <p class="logo_name">Jumo Sensor</p>
-            </div>
+        <div>
+            <span>{{ session()->get('last_activity_time') }}</span>
         </div>
+        @if(Session::has('error'))
+        <div class="alert alert-danger">
+            {{ Session::get('error')}}
+        </div>
+        @endif
         <ul class="nav_list">
             <li>
                 <a href="/home">
