@@ -22,13 +22,13 @@
                     <div class="download">
                         <h1>Download</h1>
                         <div id="download_form">
-                            <p>Select data to download</p>
+                            <p>Select a option to download the data</p>
                             <form id="data_form" action="getData" method="GET">
                                 <div class="form_only">
-                                    <p>Control sensor 1: Placed in the corner of the room at about 1.8 m height at the window
-                                        side of the room.</p>
+                                    <!--<p>Control sensor 1: Placed in the corner of the room at about 1.8 m height at the window
+                                        side of the room.</p>-->
                                     <div class="download-option-block">
-                                        <input type="checkbox" name="Temperature" id="Temperature">
+                                        <input type="checkbox" name="temperature" id="temperature">
                                         <label>Temperature</label>
                                     </div>
                                     <div class="download-option-block">
@@ -36,11 +36,11 @@
                                         <label>Pressure</label>
                                     </div>
                                     <div class="download-option-block">
-                                        <input type="checkbox" name="Humidity" id="Humidity">
+                                        <input type="checkbox" name="humidity" id="humidity">
                                         <label>Humidity</label>
                                     </div>
                                 </div>
-                                <div class="form_only">
+                                <!--<div class="form_only">
                                     <p>Control sensor 2: Placed at the middle of the wall at about 1.2 m height connecting the
                                         window side and the door side.</p>
                                     <div class="download-option-block">
@@ -70,7 +70,7 @@
                                         <input type="checkbox" name="Humidity" id="Humidity">
                                         <label>Humidity</label>
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="form_only">
                                     <p>Additional Options:</p>
                                     <div class="download-option-block">
@@ -80,6 +80,10 @@
                                     <div class="download-option-block">
                                         <input type="checkbox" name="voc" id="voc">
                                         <label>VOC</label>
+                                    </div>
+                                    <div class="download-option-block">
+                                        <input type="checkbox" name="all" id="show-all-data">
+                                        <label>All Data</label>
                                     </div>
                                     <div class="download-add-option-block">
                                         <label>From:</label>
