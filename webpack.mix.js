@@ -13,6 +13,7 @@ const mix = require('laravel-mix');
  */
 //For compiling from resource folder to the public folder
 mix.js('resources/js/app.js', 'public/js')
+    .js('resources/js/main.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/component.scss', 'public/css')
     .sass('resources/sass/index.scss', 'public/css')
