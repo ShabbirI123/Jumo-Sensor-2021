@@ -5,6 +5,7 @@
     <title>Laravel</title>
 
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/home.css')}}">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Boxicons -->
@@ -27,23 +28,37 @@
             </div>
             <div class="row">
                 <div class="column">
-                    <img src="https://commons.wikimedia.org/wiki/File:Google_Maps_icon_(2015-2020).svg" style="width:100%">
+                    <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJYSqmIR2pbUcRGO0Y7MOWMeE&key=AIzaSyCxkx0sMJlqv6Zv_fXbJQlMgIWsyXq0exg"></iframe>
                 </div>
                 <div class="column">
                     <form action="/action_page.php">
-                        <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                        <label for="lname">Last Name</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                        <label for="country">Country</label>
+                        <label for="fname" class="contactform">First Name</label>
+                        <br>
+                        <div class="contactformfield">
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        </div>
+                        <br>
+                        <label for="lname" class="contactform">Last Name</label>
+                        <br>
+                        <div class="contactformfield">
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        </div>
+                        <br>
+                        <label for="country" class="contactform">Country</label>
+                        <br>
+                        <div class="contactformfield">
                         <select id="country" name="country">
                             <option value="australia">Austria</option>
                             <option value="canada">Germany</option>
                             <option value="usa">Hungary</option>
                         </select>
-                        <label for="subject">Subject</label>
+                        </div>
+                        <br>
+                        <label for="subject" class="contactform">Subject</label>
                         <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-                        <input type="submit" value="Submit">
+                        <div class="contactformfield">
+                            <input type="submit" value="Submit">
+                        </div>
                     </form>
                 </div>
             </div>
