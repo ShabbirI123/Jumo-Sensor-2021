@@ -11,14 +11,18 @@ class DownloadFileController extends Controller
 {
     public function getData(Request $request)
     {
-
+        $options = $this->read_request($request);
 
         //$fileName = "Jumo_Data_".date("Y-m-d").".csv";
         $fileName = "Jumo_Data_" . date("Y-m-d") . ".csv";
-        $data = DB::select("SELECT * FROM jumo_values");
-
-        $options = $this->read_request($request);
-
+        if ($options[6] && $options[7]) {
+            $data = DB::select("SELECT * FROM jumo_values WHERE createdAt >= :startDate and createdAt <= :endDate", array(
+                'startDate' => $request->input('StartDate'),
+                'endDate' => $request->input('EndDate'),
+            ));
+        } else {
+            $data = DB::select("SELECT * FROM jumo_values");
+        }
         $headers = array(
             "Content-type" => "text/csv",
             "Content-Disposition" => "attachment; filename=$fileName",
@@ -98,8 +102,9 @@ class DownloadFileController extends Controller
         $coTwo = ($request->input('Co2')) ? true : false;
         $voc = ($request->input('voc')) ? true : false;
         $all = ($request->input('all')) ? true : false;
-
-        return [$temperature, $pressure, $humidity, $coTwo, $voc, $all];
+        $startDate = ($request->input('StartDate')) ? true : false;
+        $endDate = ($request->input('EndDate')) ? true : false;
+        return [$temperature, $pressure, $humidity, $coTwo, $voc, $all, $startDate, $endDate];
     }
 
     function table_name_array(Request $request)
@@ -107,7 +112,7 @@ class DownloadFileController extends Controller
         $options = $this->read_request($request);
         $array = ['Temperature', 'Pressure', 'Humidity', 'VOC', 'CO2'];
         $new_array = [];
-        for ($i = 0; $i < count($options); $i++) {
+        for ($i = 0; $i < (count($options)-2); $i++) {
             if ($options[$i]) {
                 array_push($new_array, $array[$i]);
             }
