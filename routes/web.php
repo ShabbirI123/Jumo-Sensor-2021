@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DownloadFileController;
+use App\Http\Controllers\RecommendationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,7 @@ Route::view('/profile', 'loggedIn/profile');
 Route::view('/home', 'loggedIn/home');
 Route::view('/users', 'loggedIn/users');
 Route::view('/dashboard', 'loggedIn/dashboard');
+Route::view('/recommendation', 'loggedIn/recommendation');
 Route::view('/profile', 'loggedIn/profile');
 Route::view('/download', 'loggedIn/download');
 Route::view('/settings', 'loggedIn/settings');
@@ -43,8 +45,10 @@ Route::get('/logout', '\App\Http\Controllers\LoginController@logout');
 // TODO: User wird beim ersten Aufruf aufgefordert PW zu ändern
 //Route::post('/profile', [\App\Http\Controllers\UserManagementController::class, 'changePassword'])->name('changePassword');
 
-
+// TODO: getData auf get_data ändern
 Route::get('getData', [DownloadFileController::class, 'getData']);
+
+Route::get('recommendation', [RecommendationController::class, 'get_recommendation']);
 
 /*
  * Views which can be accessed with login
