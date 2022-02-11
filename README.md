@@ -20,7 +20,7 @@ Just for the first time
 Copy the .env.example file and paste it to the project 
 
 
-folder and rename it to .env.
+folder and rename it to .env
 
 ###0.2. Step
 ```laravel
