@@ -13,7 +13,7 @@
 </head>
 <body class="antialiased">
 
-<div id="app">
+<div id="app" style="margin-left: -75px !important;">
     <x-header></x-header>
     <div class="container box">
         <h3 align="center">Login</h3><br/>

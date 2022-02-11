@@ -1,6 +1,7 @@
 #navBar {
   padding: 0px;
   margin: 0px;
+  background-color: red;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
