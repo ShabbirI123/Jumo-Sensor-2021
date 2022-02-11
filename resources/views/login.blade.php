@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Login</title>
 
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <!-- Fonts -->
@@ -16,7 +16,7 @@
 <div id="app">
     <x-header></x-header>
     <div class="container box">
-        <h3 align="center">Login</h3><br/>
+        <h3>Login</h3><br/>
 
         @if(isset(Auth::user()->role))
             <script>window.location = "/home";</script>
@@ -42,12 +42,12 @@
         <form method="post" action="{{ url('/checklogin') }}">
             {{ csrf_field() }}
             <div class="form-group">
-                <label>Enter Username</label>
-                <input type="text" name="name" class="form-control"/>
+                <label>Username</label>
+                <input type="text" name="name"/>
             </div>
             <div class="form-group">
-                <label>Enter Password</label>
-                <input type="password" name="password" class="form-control"/>
+                <label>Password</label>
+                <input type="password" name="password"/>
             </div>
             <div class="form-group">
                 <input type="submit" name="login" class="btn btn-primary" value="Login"/>
