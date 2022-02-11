@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Settings</title>
 
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <!-- Fonts -->
@@ -20,6 +20,21 @@
         @if(isset(Auth::user()->name))
             <div id="app">
                 <app-component></app-component>
+                    <!-- css was re-used from Download Section -->
+                    <div class="settings">
+                        <h1 style="text-align: left">Settings</h1>
+                        <div id="settings_form">
+                            <!-- implement form here -->
+                            <label>Change Name</label>
+                            <input type="text" name="name" placeholder="Max Mustermann"><br>
+                            <label>Change Password</label>
+                            <input type="text" name="password" placeholder="01.01.2000"><br>
+                            <label>Manage Grafana</label>
+                            <button class="btn btn-primary" onclick="window.location.href = 'http://195.201.96.148:3000/';">Grafana</button><br>
+                            <input type="submit" value="Save" name="save" class="btn btn-primary">
+                        </div>
+                    </div>
+                </div>
                 <footer-component></footer-component>
             </div>
         @else
