@@ -19,24 +19,24 @@
         <h3>Login</h3><br/>
 
         @if(isset(Auth::user()->role))
-            <script>window.location = "/home";</script>
+        <script>window.location = "/home";</script>
         @endif
 
         @if ($message = Session::get('error'))
-            <div class="alert alert-danger alert-block">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>{{ $message }}</strong>
-            </div>
+        <div class="alert alert-danger alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>{{ $message }}</strong>
+        </div>
         @endif
 
         @if (count($errors) > 0)
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
         @endif
 
         <form method="post" action="{{ url('/checklogin') }}">
@@ -56,10 +56,5 @@
     </div>
     <x-footer></x-footer>
 </div>
-
-<script src="{{asset("js/app.js")}}"></script>
-@env('local')
-    <script src="http://localhost:8080/livereload.js"></script>
-@endenv
 </body>
 </html>
