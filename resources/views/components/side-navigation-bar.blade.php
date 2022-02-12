@@ -17,6 +17,13 @@
                 <span class="tooltip">Dashboard</span>
             </li>
             <li>
+                <a href="/recommendation">
+                    <i class='bx bx-bulb'></i>
+                    <span class="links_name">Recommendation</span>
+                </a>
+                <span class="tooltip">Recommendation</span>
+            </li>
+            <li>
                 <a href="/users">
                     <i class='bx bxs-user-account'></i>
                     <span class="links_name">Users</span>
