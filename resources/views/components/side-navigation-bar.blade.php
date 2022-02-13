@@ -60,7 +60,7 @@
             </li>
         </ul>
         @if(Session::has('last_active'))
-        <div class="alert alert-danger">
+        <div class="logout-timer-block">
             <p id="logout-timer">1200</p>
         </div>
         @endif
