@@ -3,8 +3,6 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: inherit;
-    margin-left: 230px;
-    padding-left: 20px;
     height: 100%;
     padding-bottom: 30px;
 }
@@ -12,12 +10,11 @@
 .form_only {
     width: 300px;
     border: black solid 1px;
-    padding: 20px;
 }
 
 input[type=text], select {
     width: 250px;
-    padding: 12px 20px;
+    padding: 12px 0px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -29,8 +26,9 @@ input[type=submit] {
     width: 250px;
     background-color: #4CAF50;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 14px 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -43,7 +41,6 @@ input[type=submit]:hover {
 #createForm div {
     border-radius: 5px;
     padding: 20px;
-    margin-left: 210px;
 }
 
 #userAlert {
@@ -59,10 +56,7 @@ input[type=submit]:hover {
 }
 
 #userData {
-
     width: inherit;
-    margin-left: 230px;
-    padding-left: 20px;
     height: 100%;
     padding-bottom: 30px;
 }

@@ -11,10 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
 </head>
-<body class="antialiased">
+<body class="antialiased" style="margin-left: -75px !important;">
 
 <x-header></x-header>
-<x-side-navigation-bar></x-side-navigation-bar>
 {{-- TODO: Add content from    <about-component></about-component>--}}
 <x-footer></x-footer>
 </body>
