@@ -1,14 +1,6 @@
 <link href="{{asset("css/component.css")}}" rel="stylesheet">
 <div>
     <div class="sidebar">
-        <div>
-            <span>{{ session()->get('last_activity_time') }}</span>
-        </div>
-        @if(Session::has('error'))
-        <div class="alert alert-danger">
-            {{ Session::get('error')}}
-        </div>
-        @endif
         <ul class="nav_list">
             <li>
                 <a href="/home">
@@ -67,5 +59,31 @@
                 <span class="tooltip">Sign Out</span>
             </li>
         </ul>
+        @if(Session::has('last_active'))
+        <div class="alert alert-danger">
+            <p id="logout-timer">1200</p>
+        </div>
+        @endif
     </div>
 </div>
+@if(Session::has('last_active'))
+<script>
+    console.log('{{ Session::get('last_active');}}')
+    var intervalID = setInterval(timer, 1000, '{{ Session::get('last_active');}}');
+
+    function timer(lastTime)
+    {
+        let currentTime = Math.floor(new Date().getTime() / 1000);
+        // Your code here
+        // Parameters are purely optional.
+
+        let actualTime = currentTime -lastTime;
+        let timeRemaining = 1200 - parseInt(actualTime);
+        document.getElementById("logout-timer").innerHTML = timeRemaining.toString();
+
+        if (timeRemaining === 0){
+            window.location = "/logout";
+        }
+    }
+</script>
+@endif

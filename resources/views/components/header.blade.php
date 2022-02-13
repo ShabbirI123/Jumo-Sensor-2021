@@ -1,4 +1,4 @@
-<link href="{{asset("css/component.css")}}" rel="stylesheet">
+<link href="{{asset('css/component.css')}}" rel="stylesheet">
 <script src="https://kit.fontawesome.com/dd2365140c.js" crossorigin="anonymous"></script>
 <div id="navBar">
     <nav class="navbar-container">

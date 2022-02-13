@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DownloadFileController;
-use App\Http\Controllers\RecommendationController;
+use App\Http\Controllers\UserManagementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,34 +23,24 @@ use App\Http\Controllers\RecommendationController;
 Route::view('/', 'index');
 Route::view('/login', 'login');
 Route::view('/about', 'about');
-Route::view('/profile', 'loggedIn/profile');
-Route::view('/home', 'loggedIn/home');
-Route::view('/users', 'loggedIn/users');
-Route::view('/dashboard', 'loggedIn/dashboard');
-Route::view('/recommendation', 'loggedIn/recommendation');
-Route::view('/profile', 'loggedIn/profile');
-Route::view('/download', 'loggedIn/download');
-Route::view('/settings', 'loggedIn/settings');
 
+Route::group(['middleware' => 'user.auth'], function () {
+    Route::view('/profile', 'loggedIn/profile');
+    Route::view('/home', 'loggedIn/home');
+    Route::view('/users', 'loggedIn/users');
+    Route::view('/dashboard', 'loggedIn/dashboard');
+    Route::view('/profile', 'loggedIn/profile');
+    Route::view('/download', 'loggedIn/download');
+    Route::view('/settings', 'loggedIn/settings');
+});
 
 Route::post('/checklogin', [LoginController::class, 'checklogin']);
 
+Route::get('/logout', [LoginController::class, 'logout']);
 
-// TODO: Logout schöner schreiben
-Route::get('/logout', '\App\Http\Controllers\LoginController@logout');
-// TODO: Implementieren vom Download
-//Route::get('/export', [\App\Http\Controllers\JumoValueController::class, 'exportData'])->name('export');
-// TODO: Create User muss implementiert werden
-//Route::post('/users', [\App\Http\Controllers\UserManagementController::class, 'createUser'])->name('createUser');
-// TODO: User wird beim ersten Aufruf aufgefordert PW zu ändern
-//Route::post('/profile', [\App\Http\Controllers\UserManagementController::class, 'changePassword'])->name('changePassword');
+Route::post('/users', [UserManagementController::class, 'createUser']);
 
-// TODO: getData auf get_data ändern
+Route::post('/profile', [UserManagementController::class, 'changePassword']);
+
 Route::get('getData', [DownloadFileController::class, 'getData']);
 
-Route::get('recommendation', [RecommendationController::class, 'get_recommendation']);
-
-/*
- * Views which can be accessed with login
- * Usage of middleware
- * */
