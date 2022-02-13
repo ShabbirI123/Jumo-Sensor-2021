@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DownloadFileController;
 use App\Http\Controllers\UserManagementController;
+use App\Http\Controllers\RecommendationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,7 @@ Route::group(['middleware' => 'user.auth'], function () {
     Route::view('/users', 'loggedIn/users');
     Route::view('/dashboard', 'loggedIn/dashboard');
     Route::view('/profile', 'loggedIn/profile');
+    Route::view('/recommendation', 'loggedIn/recommendation');
     Route::view('/download', 'loggedIn/download');
     Route::view('/settings', 'loggedIn/settings');
 });
@@ -43,4 +45,6 @@ Route::post('/users', [UserManagementController::class, 'createUser']);
 Route::post('/profile', [UserManagementController::class, 'changePassword']);
 
 Route::get('getData', [DownloadFileController::class, 'getData']);
+
+Route::get('recommendation', [RecommendationController::class, 'get_recommendation']);
 
