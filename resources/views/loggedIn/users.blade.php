@@ -31,7 +31,7 @@
                 <div class="form_only">
                     Username: <input type="text" name="name" placeholder="username" id="name" required><br>
                     Password: <input type="password" name="password" placeholder="password" id="password" required><br>
-                    E-Mail: <input type="email" name="email" placeholder="e-mail" id="email" required><br>
+                    E-Mail: <input type="email" name="email" placeholder="e-mail" id="email" required style="margin-left: 22px"><br>
                     Role: <select name="role" placeholder="role" id="role" required>
                         <option value="admin" name="admin" id="admin">Admin</option>
                         <option value="superuser" name="superuser" id="superuser">Superuser</option>

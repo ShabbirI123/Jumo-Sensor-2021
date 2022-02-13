@@ -73,7 +73,7 @@
 }
 
 body {
-  margin: 0px;
+  margin: 0;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
@@ -83,7 +83,6 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  margin-left: 75px;
 }
 
 hr {
@@ -11294,6 +11293,11 @@ h1, .h1 {
 
 * {
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.mybody {
+  margin-left: 5rem !important;
 }
 
 .contact_data {
@@ -11357,8 +11361,6 @@ input[type=submit]:hover {
 }
 .download {
   border-radius: 5px;
-  background-color: #f2f2f2;
-  padding-left: 1%;
 }
 
 #download_form {
@@ -11392,7 +11394,7 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.form_only {
+.download .form_only {
   width: 100%;
   margin-bottom: 1.5rem;
   border: 1px solid black;
@@ -11401,17 +11403,17 @@ input[type=submit]:hover {
   display: flex;
   flex-wrap: wrap;
 }
-.form_only p {
+.download .form_only p {
   flex: 0 1 100%;
 }
-.form_only .download-option-block {
+.download .form_only .download-option-block {
   flex: 0 1 33%;
   align-self: center;
 }
-.form_only .download-add-option-block {
+.download .form_only .download-add-option-block {
   flex: 0 1 100%;
 }
-.form_only .download-add-option-block input {
+.download .form_only .download-add-option-block input {
   margin-right: 0.5rem;
 }
 
@@ -11425,10 +11427,4 @@ input[type=submit]:hover {
   height: 50px;
   font-size: 25px;
   text-align: center;
-  width: 300px;
-  padding: 1% 1%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background-color: #fff;
 }

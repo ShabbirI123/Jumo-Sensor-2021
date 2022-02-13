@@ -14,7 +14,6 @@
 
 </head>
 <body class="antialiased">
-<x-header></x-header>
 <x-side-navigation-bar></x-side-navigation-bar>
 <div class="mybody">
     @if(isset(Auth::user()->name))
@@ -43,7 +42,6 @@
         <script>window.location = "/login";</script>
     @endif
 </div>
-<x-footer></x-footer>
 
 </body>
 </html>
