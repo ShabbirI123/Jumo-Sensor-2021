@@ -36,6 +36,29 @@ input[type=submit]:hover {
 }
 
 .form_only {
-    width: 300px;
-    padding: 0 5%;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    p{
+        flex: 0 1 100%;
+    }
+
+    .download-option-block{
+        flex: 0 1 33%;
+        align-self: center;
+    }
+
+    .download-add-option-block{
+        flex: 0 1 100%;
+
+        input{
+            margin-right: 0.5rem;
+        }
+    }
 }
+
