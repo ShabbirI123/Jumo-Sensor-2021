@@ -68,7 +68,7 @@
 </div>
 @if(Session::has('last_active'))
 <script>
-    console.log('{{ Session::get('last_active');}}')
+    {{--console.log('{{ Session::get('last_active');}}')--}}
     var intervalID = setInterval(timer, 1000, '{{ Session::get('last_active');}}');
 
     function timer(lastTime)

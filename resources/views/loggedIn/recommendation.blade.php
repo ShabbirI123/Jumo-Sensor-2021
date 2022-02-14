@@ -12,18 +12,25 @@
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
 </head>
 <body class="antialiased">
-<x-header></x-header>
 <x-side-navigation-bar></x-side-navigation-bar>
 <div class="mybody">
     @if(isset(Auth::user()->name))
         <div id="app">
             <div id="rec_wrapper">
-                <p>Shabbir</p>
+<!--                --><?php //$data = DB::select('SELECT jumo_predict FROM jumo_prediction ORDER BY createdAt DESC LIMIT 1'); ?>
                 @foreach($data as $temp)
-                    <p>{{$temp->jumo_predict}}</p>
+                    <div class="tempBox">Aktuelle Temperatur:
+                        <p class="valueBox" id="tempValue">{{$temp->jumo_predict}}</p>
+                    </div>
                 @endforeach
+                <div class="tempBox" id="occupBox">Personen im Raum:
+                    <input type="number" class="valueBox" id="occupValue" placeholder="20..">
+{{--                    <button type="submit" formmethod="post" id="occupBtn">Ändern</button>--}}
+                </div>
                 <div>
                     <p class="recommendationBox" id="heaterOn">"Turn the heater on"</p>
                 </div>
@@ -42,7 +49,6 @@
         <script>window.location = "/login";</script>
     @endif
 </div>
-<x-footer></x-footer>
 
 </body>
 </html>

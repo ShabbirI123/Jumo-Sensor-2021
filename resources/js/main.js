@@ -73,4 +73,63 @@ $(document).ready(function () {
         }
     }
 
+    $("#tempValue").on('hover', function (){
+        // let x = this.innerHTML;
+        // let out = parseFloat(x);
+        // let co2 = 1400;
+        //
+        // if (out > 21.0) {
+        //     $('#heaterOn').css({
+        //         'background-color': 'blue',
+        //     })
+        // } else if (out < 18.0) {
+        //     $('#heaterOff').css({
+        //         'background-color': 'blue',
+        //     })
+        // } else if (out > 22.0 && co2 > 1500) {
+        //     $('#windowOpen').css({
+        //         'background-color': 'blue',
+        //     })
+        // } else if (out > 22.0 && co2 > 1500) {
+        //     $('#windowClose').css({
+        //       'background-color': 'blue',
+        //     })
+        // }
+
+    })
+
+    var intervalID = setInterval(recommendationColor, 2000, $("#tempValue").html());
+
+    function recommendationColor(out)
+    {
+        out = parseFloat(out);
+        let co2 = 1600;
+        console.log(out);
+        console.log(occupancy);
+
+        if (out > 21.0) {
+            $('#heaterOn').css({
+                'background-color': 'blue',
+            })
+            console.log('changed to blue');
+        } else if (out < 18.0) {
+            $('#heaterOff').css({
+                'background-color': 'red',
+            })
+            console.log('changed to red');
+        } else if (out > 22.0 && co2 > 1500) {
+            $('#windowOpen').css({
+                'background-color': 'yellow',
+            })
+            console.log('changed to yellow');
+        } else if (out > 22.0 && co2 > 1500) {
+            $('#windowClose').css({
+                'background-color': 'green',
+            })
+            console.log('changed to green');
+        }
+    }
+
+    var occupancy = $('#occupValue').val();
+
 });

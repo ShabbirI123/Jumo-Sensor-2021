@@ -11394,7 +11394,7 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.form_only {
+.download .form_only {
   width: 100%;
   margin-bottom: 1.5rem;
   border: 1px solid black;
@@ -11403,17 +11403,17 @@ input[type=submit]:hover {
   display: flex;
   flex-wrap: wrap;
 }
-.form_only p {
+.download .form_only p {
   flex: 0 1 100%;
 }
-.form_only .download-option-block {
+.download .form_only .download-option-block {
   flex: 0 1 33%;
   align-self: center;
 }
-.form_only .download-add-option-block {
+.download .form_only .download-add-option-block {
   flex: 0 1 100%;
 }
-.form_only .download-add-option-block input {
+.download .form_only .download-add-option-block input {
   margin-right: 0.5rem;
 }
 
@@ -11423,8 +11423,29 @@ input[type=submit]:hover {
 
 .recommendationBox {
   border: solid black 1px;
-  width: 250px;
+  width: 300px;
   height: 50px;
   font-size: 25px;
   text-align: center;
+}
+
+.tempBox {
+  width: 350px;
+  height: 50px;
+  font-size: 25px;
+  text-align: center;
+  position: relative;
+  display: flex;
+}
+
+.valueBox {
+  border: solid black 1px;
+  width: 110px;
+  position: absolute;
+  margin-left: 300px;
+  text-align: center;
+}
+
+#occupBox {
+  width: 250px;
 }
