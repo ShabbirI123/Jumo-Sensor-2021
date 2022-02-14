@@ -39,7 +39,7 @@
         </div>
         @endif
 
-        <form method="post" action="{{ url('/checklogin') }}">
+        <form method="post" action="{{ url('/checklogin') }}" class="login_form">
             {{ csrf_field() }}
             <div class="form-group">
                 <label>Username</label>
