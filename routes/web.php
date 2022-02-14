@@ -44,6 +44,8 @@ Route::post('/users', [UserManagementController::class, 'createUser']);
 
 Route::post('/profile', [UserManagementController::class, 'changePassword']);
 
+Route::post('/save_occupancy', [RecommendationController::class, 'save_occupancy']);
+
 Route::get('getData', [DownloadFileController::class, 'getData']);
 
 Route::get('recommendation', [RecommendationController::class, 'get_recommendation']);

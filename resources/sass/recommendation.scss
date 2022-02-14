@@ -31,6 +31,17 @@
     width: 250px;
 }
 
+.form-control{
+    width: 100% !important;
+    max-width: 300px;
+    min-width: 100px;
+    display: block !important;
+}
+
+#room-accupancy{
+    margin-left: 100px;
+}
+
 //#occupBtn {
 //    margin-left: 300px;
 //}

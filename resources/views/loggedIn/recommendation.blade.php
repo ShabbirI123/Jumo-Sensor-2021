@@ -21,16 +21,12 @@
     @if(isset(Auth::user()->name))
         <div id="app">
             <div id="rec_wrapper">
-<!--                --><?php //$data = DB::select('SELECT jumo_predict FROM jumo_prediction ORDER BY createdAt DESC LIMIT 1'); ?>
+                <h1 style="text-align: left">Recommendation</h1>
                 @foreach($data as $temp)
                     <div class="tempBox">Aktuelle Temperatur:
                         <p class="valueBox" id="tempValue">{{$temp->jumo_predict}}</p>
                     </div>
                 @endforeach
-                <div class="tempBox" id="occupBox">Personen im Raum:
-                    <input type="number" class="valueBox" id="occupValue" placeholder="20..">
-{{--                    <button type="submit" formmethod="post" id="occupBtn">Ändern</button>--}}
-                </div>
                 <div>
                     <p class="recommendationBox" id="heaterOn">"Turn the heater on"</p>
                 </div>
@@ -43,6 +39,41 @@
                 <div>
                     <p class="recommendationBox" id="windowClose">Close the window</p>
                 </div>
+            </div>
+            <br>
+            <div id="room-accupancy">
+                <form id="data_form" action="/save_occupancy" method="POST">
+                    @csrf
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Person in room*</label>
+                        <input type="number" class="form-control" name="occupValue" id="occupValue" aria-describedby="valueHelp" placeholder="25" required>
+                        <small id="occupValueHelp" class="form-text text-muted">Please enter the total number of the room occupancy!</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">School*</label>
+                        <input type="text" class="form-control" name="school_place" id="school-place" placeholder="Traiskirchen Volkschule" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleCheck1">Classroom*</label>
+                        <input type="text" class="form-control" name="classroom" id="classroom" placeholder="4.A" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                @if(Session::has('error'))
+                <div class="alert alert-danger">
+                    {{ Session::get('error')}}
+                </div>
+                @endif
+                @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success')}}
+                </div>
+                @endif
+                @if(Session::has('failure'))
+                <div class="alert alert-danger">
+                    {{ Session::get('failure')}}
+                </div>
+                @endif
             </div>
         </div>
     @else

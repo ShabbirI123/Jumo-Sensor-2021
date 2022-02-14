@@ -11359,6 +11359,11 @@ input[type=submit]:hover {
     margin-top: 0;
   }
 }
+.btn.btn-primary {
+  background: #2a73b0 !important;
+  width: 150px !important;
+}
+
 .download {
   border-radius: 5px;
 }
@@ -11448,4 +11453,15 @@ input[type=submit]:hover {
 
 #occupBox {
   width: 250px;
+}
+
+.form-control {
+  width: 100% !important;
+  max-width: 300px;
+  min-width: 100px;
+  display: block !important;
+}
+
+#room-accupancy {
+  margin-left: 100px;
 }
