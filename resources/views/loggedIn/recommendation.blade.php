@@ -21,8 +21,7 @@
         <div id="app">
             <div id="rec_wrapper">
                 <p>Shabbir</p>
-<!--                --><?php //$data = DB::select('SELECT jumo_predict FROM jumo_prediction ORDER BY createdAt DESC LIMIT 1'); ?>
-            @foreach($data as $temp)
+                @foreach($data as $temp)
                     <p>{{$temp->jumo_predict}}</p>
                 @endforeach
                 <div>
