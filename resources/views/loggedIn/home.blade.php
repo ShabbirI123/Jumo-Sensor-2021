@@ -62,7 +62,7 @@
                     <textarea id="subject" name="subject" placeholder="Write something.."
                               style="height:170px"></textarea>
                     <div class="contactformfield">
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit" class="btn btn-primary" style="margin-left: 50px">
                     </div>
                 </form>
             </div>
