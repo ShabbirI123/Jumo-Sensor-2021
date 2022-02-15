@@ -68,5 +68,6 @@
         <script>window.location = "/login";</script>
     @endif
 </div>
+<x-footer-log></x-footer-log>
 </body>
 </html>

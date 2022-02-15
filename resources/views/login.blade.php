@@ -7,14 +7,15 @@
     <title>Login</title>
 
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link href="{{asset('css/index.css')}}" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dd2365140c.js" crossorigin="anonymous"></script>
 
 </head>
 <body class="antialiased">
-
+<x-header></x-header>
 <div id="app" style="margin-left: -75px !important;">
-    <x-header></x-header>
     <div class="container box">
         <h3>Login</h3><br/>
 
@@ -54,7 +55,7 @@
             </div>
         </form>
     </div>
-    <x-footer></x-footer>
 </div>
+<x-footer></x-footer>
 </body>
 </html>
