@@ -23,8 +23,8 @@
             <div id="rec_wrapper">
                 <h1 style="text-align: left">Recommendation</h1>
                 @foreach($data as $temp)
-                    <div class="tempBox">Aktuelle Temperatur:
-                        <p class="valueBox" id="tempValue">{{$temp->jumo_predict}}</p>
+                    <div class="tempBox">Temperatur in 5 Minuten:
+                        <p class="valueBox" id="tempValue">{{number_format($temp->jumo_predict, 1)}}</p>
                     </div>
                 @endforeach
                 <div>

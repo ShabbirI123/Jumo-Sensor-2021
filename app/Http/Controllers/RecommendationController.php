@@ -11,7 +11,7 @@ class RecommendationController extends Controller
 {
     public function get_recommendation(){
         $data = DB::select('SELECT jumo_predict FROM jumo_prediction ORDER BY createdAt DESC LIMIT 1');
-        return view('loggedIn/recommendation', compact('data'));
+        return view('loggedIn/recommendation', compact('data', $data));
     }
 
     function save_occupancy(Request $request) {
