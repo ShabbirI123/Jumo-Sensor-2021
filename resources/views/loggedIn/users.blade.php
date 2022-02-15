@@ -7,6 +7,7 @@
     <title>Laravel</title>
 
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link href="{{asset('css/users.css')}}" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Boxicons -->
@@ -25,6 +26,7 @@
             </div>
             @endif
         </div>
+        <h1 style="text-align: left";>Create a new user:</h1>
         <div id="createForm">
             <form action="/users" method="POST">
                 {{ csrf_field() }}

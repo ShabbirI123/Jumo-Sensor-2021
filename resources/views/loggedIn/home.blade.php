@@ -29,7 +29,7 @@
             <h2>Contact Us</h2>
             <p>Swing by for a cup of coffee, or leave us a message:</p>
         </div>
-        <div class="row">
+        <div class="row" style="align-content: center">
             <div class="column">
                 <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
                         src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJYSqmIR2pbUcRGO0Y7MOWMeE&key=AIzaSyCxkx0sMJlqv6Zv_fXbJQlMgIWsyXq0exg"></iframe>
