@@ -78,5 +78,6 @@
     <script>window.location = "/home";</script>
     @endif
 </div>
+<x-footer-log></x-footer-log>
 </body>
 </html>
