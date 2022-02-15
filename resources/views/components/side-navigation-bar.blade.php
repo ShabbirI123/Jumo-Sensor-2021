@@ -1,11 +1,6 @@
 <link href="{{asset("css/component.css")}}" rel="stylesheet">
 <div>
     <div class="sidebar">
-        <div class="logo_content">
-            <div class="logo">
-                <p class="logo_name">Jumo Sensor</p>
-            </div>
-        </div>
         <ul class="nav_list">
             <li>
                 <a href="/home">
@@ -20,6 +15,13 @@
                     <span class="links_name">Dashboard</span>
                 </a>
                 <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="/recommendation">
+                    <i class='bx bx-bulb'></i>
+                    <span class="links_name">Recommendation</span>
+                </a>
+                <span class="tooltip">Recommendation</span>
             </li>
             <li>
                 <a href="/users">
@@ -57,5 +59,31 @@
                 <span class="tooltip">Sign Out</span>
             </li>
         </ul>
+        @if(Session::has('last_active'))
+        <div class="logout-timer-block">
+            <p id="logout-timer">1200</p>
+        </div>
+        @endif
     </div>
 </div>
+@if(Session::has('last_active'))
+<script>
+    {{--console.log('{{ Session::get('last_active');}}')--}}
+    var intervalID = setInterval(timer, 1000, '{{ Session::get('last_active');}}');
+
+    function timer(lastTime)
+    {
+        let currentTime = Math.floor(new Date().getTime() / 1000);
+        // Your code here
+        // Parameters are purely optional.
+
+        let actualTime = currentTime -lastTime;
+        let timeRemaining = 1200 - parseInt(actualTime);
+        document.getElementById("logout-timer").innerHTML = timeRemaining.toString();
+
+        if (timeRemaining === 0){
+            window.location = "/logout";
+        }
+    }
+</script>
+@endif

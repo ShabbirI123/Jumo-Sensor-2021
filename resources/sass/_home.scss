@@ -9,6 +9,11 @@ h1 {
 
 * {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.mybody{
+    margin-left: 5rem !important;
 }
 
 .contact_data {
@@ -69,4 +74,9 @@ input[type=submit]:hover {
         width: 100%;
         margin-top: 0;
     }
+}
+
+.btn.btn-primary{
+    background: #2a73b0 !important;
+    width: 150px !important;
 }

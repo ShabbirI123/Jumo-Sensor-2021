@@ -10,7 +10,7 @@
     left: 0;
     height: 100%;
     width: 75px;
-    background: #11101d;
+    background: rgb(32, 51, 103);
     padding: 6px 14px;
     z-index: 99;
     transition: all 0.5s ease;
@@ -164,4 +164,15 @@
     text-align: center;
     transition: all 0.4s ease;
     background: #1d1b31;
+}
+
+.logout-timer-block{
+    p{
+        color: white;
+        font-size: 16px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
 }

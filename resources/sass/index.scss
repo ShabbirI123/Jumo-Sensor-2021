@@ -6,7 +6,8 @@ $secondHeaderColor: #00bFFF;
     padding: 0px;
     margin: 0px;
     text-decoration: none;
-    font-family: Arial;
+    //overwrites standard font-family -> disabled
+    //font-family: Arial;
 }
 #main{
     width: 100%;
