@@ -300,92 +300,17 @@
   background: #1d1b31;
 }
 
+.logout-timer-block p {
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
 /*Color*/
 /*Size*/
-/*.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.footer{
-    background: $backgroundColor;
-    color: $textColor;
-    padding-bottom: 25px;
-
-    .container-fluid{
-        #footer-content{
-            width: 1200px;
-            margin: auto;
-            height: 320px;
-            .footer-header{
-                display: block;
-                padding-left: 5px;
-                width: 390px;
-                float: left;
-                header{
-                    font-size: $footerHeader;
-                    padding: 15px 0px 20px 0px;
-                    font-weight: bold;
-                    text-align: center;
-                }
-
-                div{
-                    ul{
-                        li{
-                            width: 150px;
-                            list-style: none;
-                            line-height: 50px;
-                            font-size: $footerLink;
-
-                            a{
-                                color: $textColor;
-                            }
-                        }
-
-                        li:hover{
-                            border-bottom: $borderBottom solid 4px;
-                        }
-                    }
-                }
-            }
-            #contact{
-                header{
-                    padding: 15px 0px 20px 0px;
-                }
-                div{
-                    h2{
-                        font-size: $contactText;
-                        font-weight: bold;
-                        line-height: 50px;
-                    }
-
-                    p{
-                        font-size: $contactText;
-                        line-height: 50px;
-
-                        a{
-                            font-size: $contactText;
-                            line-height: 50px;
-                        }
-                    }
-                }
-            }
-            #location{
-
-                iframe{
-                    padding-left: 70px;
-                    width: 250px;
-                    height: 250px;
-                }
-            }
-        }
-    }
-}*/
-* {
-  font-family: Open Sans;
-}
-
 section {
   width: 100%;
   display: inline-block;
@@ -403,7 +328,8 @@ section {
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-  font: bold 16px sans-serif;
+  font-size: 16px;
+  font-weight: bold;
   padding: 55px 50px;
 }
 
@@ -422,7 +348,8 @@ section {
 /* The company logo */
 .footer-distributed h3 {
   color: #ffffff;
-  font: normal 36px "Open Sans", cursive;
+  font-size: 36px;
+  font-weight: normal;
   margin: 0;
 }
 
@@ -552,7 +479,8 @@ section {
 /* If you don't want the footer to be responsive, remove these media queries */
 @media (max-width: 880px) {
   .footer-distributed {
-    font: bold 14px sans-serif;
+    font-size: 14px;
+    font-weight: bold;
   }
 
   .footer-distributed .footer-left,

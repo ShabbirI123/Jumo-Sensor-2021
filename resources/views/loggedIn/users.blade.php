@@ -14,51 +14,40 @@
 
 </head>
 <body class="antialiased">
-<x-header></x-header>
 <x-side-navigation-bar></x-side-navigation-bar>
 <div class="mybody">
-    @if(isset(Auth::user()->name))
-        @if(Auth::user()->role=='admin')
-            <div id="app">
-                <app-component></app-component>
-
-                <div id="userAlert">
-                    @if($message = Session::get('success'))
-                        <div class="alert alert-success">
-                            <p>{{$message}}</p>
-                        </div>
-                    @endif
-                </div>
-                <div id="createForm">
-                    <form action="/users" method="POST">
-                        {{ csrf_field() }}
-                        <div class="form_only">
-                            Username: <input type="text" name="name" placeholder="username" id="name" required><br>
-                            Password: <input type="password" name="password" placeholder="password" id="password" required><br>
-                            E-Mail: <input type="email" name="email" placeholder="e-mail" id="email" required style="margin-left: 22px"><br>
-                            Role: <select name="role" placeholder="role" id="role" required>
-                                <option value="admin" name="admin" id="admin">Admin</option>
-                                <option value="superuser" name="superuser" id="superuser">Superuser</option>
-                                <option value="user" name="user" id="user">User</option>
-                            </select><br>
-                            <button type="submit" class="btn btn-primary">Create User</button>
-                        </div>
-                    </form>
-                </div>
-
-                <footer-component></footer-component>
+    @if(Auth::user()->role=='admin')
+    <div id="app">
+        <div id="userAlert">
+            @if($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>{{$message}}</p>
             </div>
-        @else
-            <script>
-                window.alert("Can only access with admin rights!");
-            </script>
-            <script>window.location = "/home";</script>
-        @endif
+            @endif
+        </div>
+        <div id="createForm">
+            <form action="/users" method="POST">
+                {{ csrf_field() }}
+                <div class="form_only">
+                    Username: <input type="text" name="name" placeholder="username" id="name" required><br>
+                    Password: <input type="password" name="password" placeholder="password" id="password" required><br>
+                    E-Mail: <input type="email" name="email" placeholder="e-mail" id="email" required style="margin-left: 22px"><br>
+                    Role: <select name="role" placeholder="role" id="role" required>
+                        <option value="admin" name="admin" id="admin">Admin</option>
+                        <option value="superuser" name="superuser" id="superuser">Superuser</option>
+                        <option value="user" name="user" id="user">User</option>
+                    </select><br>
+                    <button type="submit" class="btn btn-primary">Create User</button>
+                </div>
+            </form>
+        </div>
+    </div>
     @else
-        <script>window.location = "/login";</script>
+    <script>
+        window.alert("Can only access with admin rights!");
+    </script>
+    <script>window.location = "/home";</script>
     @endif
 </div>
-<x-footer></x-footer>
-
 </body>
 </html>

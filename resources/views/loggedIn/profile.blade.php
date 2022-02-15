@@ -14,12 +14,15 @@
 
 </head>
 <body class="antialiased">
-<x-header></x-header>
 <x-side-navigation-bar></x-side-navigation-bar>
 <div class="mybody">
     @if(isset(Auth::user()->name))
         <div id="app">
-            <app-component></app-component>
+            @if(Auth::user()->role=='admin')
+            <div>
+                <a href="https://notify.run/c/d0o7XC7vbiMSLyYCwOJ6" target="_blank">Notify me</a>
+            </div>
+            @endif
             <div id="userData">
                 <div class="col-md-8">
                     <div class="card mb-3">
@@ -65,7 +68,5 @@
         <script>window.location = "/login";</script>
     @endif
 </div>
-<x-footer></x-footer>
-
 </body>
 </html>
