@@ -37,7 +37,7 @@
                     <p class="recommendationBox" id="windowOpen">"Open the window"</p>
                 </div>
                 <div>
-                    <p class="recommendationBox" id="windowClose">Close the window</p>
+                    <p class="recommendationBox" id="windowClose">"Close the window"</p>
                 </div>
             </div>
             <br>

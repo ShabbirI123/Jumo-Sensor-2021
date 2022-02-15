@@ -7,6 +7,7 @@
     <title>Laravel</title>
 
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link href="{{asset('css/profile.css')}}" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Boxicons -->
@@ -19,9 +20,9 @@
     @if(isset(Auth::user()->name))
         <div id="app">
             @if(Auth::user()->role=='admin')
-            <div>
-                <a href="https://notify.run/c/d0o7XC7vbiMSLyYCwOJ6" target="_blank">Notify me</a>
-            </div>
+            <div><br>
+                <a href="https://notify.run/c/d0o7XC7vbiMSLyYCwOJ6" class="btn btn-primary" target="_blank">Notify me</a>
+            </div><br>
             @endif
             <div id="userData">
                 <div class="col-md-8">
@@ -53,10 +54,9 @@
                 <form action="/profile" method="POST">
                     {{ csrf_field() }}
                     <div class="form_only">
-                        New password: <input type="text" name="npassword" placeholder="new password" id="npassword"
-                                             required><br>
-                        Reconfirm new password: <input type="text" name="rnpassword" placeholder="new password"
-                                                       id="rnpassword" required><br>
+                        Set new password:<br>
+                        <input type="text" name="npassword" placeholder="New password" id="npassword" required><br>
+                        <input type="text" name="rnpassword" placeholder="Confirm new password" id="rnpassword" required><br>
                         <button type="submit" class="btn btn-primary">Change Password</button>
                     </div>
                 </form>

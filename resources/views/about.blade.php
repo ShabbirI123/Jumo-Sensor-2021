@@ -14,7 +14,7 @@
 </head>
 <body class="antialiased">
 <x-header></x-header>
-<div class="about-wrapper">
+<div class="about-wrapper" >
     <div class="about-section">
         <h1>About Us Page</h1>
         <div id="about-content">
